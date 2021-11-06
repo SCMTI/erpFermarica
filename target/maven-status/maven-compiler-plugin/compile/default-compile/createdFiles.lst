@@ -11,6 +11,7 @@ br\com\artedigitaldesigner\enums\Funcao.class
 br\com\artedigitaldesigner\enums\TipoContato.class
 br\com\artedigitaldesigner\enums\Sexo.class
 br\com\artedigitaldesigner\helpers\DateHelper.class
+br\com\artedigitaldesigner\enums\seguranca.class
 br\com\artedigitaldesigner\config\SwaggerConfiguration.class
 br\com\artedigitaldesigner\dto\emprestimos\EmprestimoPostDTO.class
 br\com\artedigitaldesigner\dto\leitores\LeitorGetDTO.class

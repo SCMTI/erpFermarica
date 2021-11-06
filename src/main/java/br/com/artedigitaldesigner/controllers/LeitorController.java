@@ -81,7 +81,7 @@ public class LeitorController {
 			enderecoRepository.save(endereco);
 			contatoRepository.save(contato);
 
-			return ResponseEntity.status(HttpStatus.OK).body("Leitor cadastrado com sucesso.");
+			return ResponseEntity.status(HttpStatus.CREATED).body("Leitor cadastrado com sucesso.");
 
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro: " + e.getMessage());
@@ -130,7 +130,7 @@ public class LeitorController {
 			enderecoRepository.save(endereco);
 			contatoRepository.save(contato);
 
-			return ResponseEntity.status(HttpStatus.OK).body("Leitor atualizado com sucesso.");
+			return ResponseEntity.status(HttpStatus.CREATED).body("Leitor atualizado com sucesso.");
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro: " + e.getMessage());
 		}
@@ -149,7 +149,7 @@ public class LeitorController {
 
 			leitorRepository.delete(result.get());
 
-			return ResponseEntity.status(HttpStatus.OK).body("Leitor excluido com sucesso.");
+			return ResponseEntity.status(HttpStatus.CREATED).body("Leitor excluido com sucesso.");
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro: " + e.getMessage());
 		}
@@ -188,7 +188,7 @@ public class LeitorController {
 			dto.setCep(leitor.getEndereco().getCep());
 			dto.setCpf(leitor.getCpf());
 
-			return ResponseEntity.status(HttpStatus.OK).body(dto);
+			return ResponseEntity.status(HttpStatus.CREATED).body(dto);
 
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
@@ -231,7 +231,7 @@ public class LeitorController {
 				result.add(dto);
 			}
 
-			return ResponseEntity.status(HttpStatus.OK).body(result);
+			return ResponseEntity.status(HttpStatus.CREATED).body(result);
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
 		}
